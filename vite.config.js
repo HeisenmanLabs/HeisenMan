@@ -5,7 +5,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.NETLIFY ? "/" : "/HeisenMan/",
+  base: (process.env.NETLIFY || process.env.RENDER) ? "/" : "/HeisenMan/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
